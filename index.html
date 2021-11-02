@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+
+    <!-- CSS Reset -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+
+    <!-- Milligram CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>Tableau Data Analysis of Hollywood's Most Profitable Films</title>
+
+    <!-- Meta tags for SEO and social sharing -->
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta
+      name="description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Hello World!" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta
+      property="og:description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>
+      Tableau Data Analysis of Hollywood's Most Profitable Stories
+    </h1>
+    <!--
+      This is the body of the page
+      Look at the elements and see how they appear in the rendered page on the right
+      Each element is defined using tags, with < and > indicating where each one opens and closes
+      There are elements for sections of the page, images, text, and more
+      The elements include attributes referenced in the CSS for the page style
+    -->
+    <h2>
+      Data Selection
+    </h2>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <p>
+            We found this dataset called "Hollywood's Most Profitable Stories"
+            on Tableau Public's Sample Data page. We were interested in
+            conducting data analysis related to films and their total
+            profitability, looking at factors such as audience score, worldwide
+            gross revenue, genre, and the studio that released the film.
+            <br /><br />
+            We were looking for a dataset that had many categorical variables to
+            allow for sufficient data analysis in Tableau, as we had encountered
+            other datasets that were not as suitable for this approach. We had
+            tried previously to use a dataset with university data from the
+            United States, but it had many percentages that were not linked to
+            other variables in the dataset in any way - making data analysis
+            much more difficult.
+            <br /><br />
+            We took into account that this dataset was listed on Tableau's
+            website, as we had looked at a dataset from Kaggle, where the volume
+            of available datasets is much larger, but they can be uploaded by
+            anyone in the Kaggle community. We previously tried to use a dataset
+            that was reportedly from WHO, but actually contained very inaccurate
+            data after completing data validation with facts about various
+            countries.
+          </p>
+        </div>
+        <div class="column">
+          <img
+            src="https://cdn.glitch.me/4b0633dd-5b0f-4f20-b722-b439dd17a12b%2FData%20Screenshot.png?v=1634102709682"
+          />
+        </div>
+      </div>
+    </div>
+
+    <h2>
+      Data Processing
+    </h2>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <p>
+            We were fortunate that we didn't have to do much data processing
+            with this dataset. The dataset is relatively small, with only 75
+            movies included. For one of the entries, the lead studio category
+            variable was null, so we researched the movie and added an entry for
+            that variable. There are a couple of data entries without a
+            profitability value, but we did not have the full range of data in
+            order to compute that ourselves.
+          </p>
+        </div>
+        <div class="column">
+          <img
+            src="https://cdn.glitch.me/4b0633dd-5b0f-4f20-b722-b439dd17a12b%2Fhollywood-profitable-datasetcount.png?v=1634136249525"
+          />
+        </div>
+      </div>
+    </div>
+
+    <h2>
+      Exploration
+    </h2>
+    <div class="container">
+      <div class="column">
+        <p>
+          We separated the data exploration process in Tableau by dividing it
+          into four different sections: looking at films by genre, looking at
+          films over time, time series data, and looking at films with audience
+          ratings. We were trying to use the categorical data and go as in depth
+          as possible, so separating our analysis into these sections helped to
+          focus our story and analysis.
+          <br /><br />
+        </p>
+        <div
+          class="tableauPlaceholder"
+          id="viz1634145189830"
+          style="position: relative"
+        >
+          <noscript
+            ><a href="#"
+              ><img
+                alt="Analysis of Worldwide Gross and Profitability "
+                src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mo&#47;MostProfitableMovies_16341022309150&#47;GrossandProfit&#47;1_rss.png"
+                style="border: none"/></a></noscript
+          ><object class="tableauViz" style="display:none;"
+            ><param
+              name="host_url"
+              value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+            <param name="embed_code_version" value="3"/>
+            <param name="site_root" value=""/><param
+              name="name"
+              value="MostProfitableMovies_16341022309150&#47;GrossandProfit"/><param
+              name="tabs"
+              value="no"/><param name="toolbar" value="yes"/><param
+              name="static_image"
+              value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mo&#47;MostProfitableMovies_16341022309150&#47;GrossandProfit&#47;1.png"/>
+            <param name="animate_transition" value="yes"/><param
+              name="display_static_image"
+              value="yes"/><param name="display_spinner" value="yes"/><param
+              name="display_overlay"
+              value="yes"/><param name="display_count" value="yes"/><param
+              name="language"
+              value="en-US"
+          /></object>
+        </div>
+        <script type="text/javascript">
+          var divElement = document.getElementById("viz1634145189830");
+          var vizElement = divElement.getElementsByTagName("object")[0];
+          vizElement.style.width = "100%";
+          vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+          var scriptElement = document.createElement("script");
+          scriptElement.src =
+            "https://public.tableau.com/javascripts/api/viz_v1.js";
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+        <br /><br />
+        <p>
+          Movies are expensive to make, so it’s not surprising that when we
+          analyzed highest-grossing movies and the most profitable ones, we
+          learned that a movie that was high-grossing was not necessarily as
+          profitable as we would think. Here we see that the top most profitable
+          movie Fireproof with a profit of $66.93 million was not even in the
+          top 50% of highest-grossing movies, suggesting that although the
+          revenue it generated was not necessarily very high compared to other
+          movies. It’s likely that it had a low cost of production, making the
+          profit margin very large even when it didn’t generate a high revenue.
+          Generally, however, there seems to be a positive correlation between
+          gross revenue and profitability. For example, The Twilight Saga: New
+          Moon movie is the third most profitable movie as well as the
+          highest-grossing movie in the dataset. This relationship is especially
+          evident in the third visualization, where we see that the
+          higher-grossing movies have higher profitability. <br /><br />
+        </p>
+
+        <div
+          class="tableauPlaceholder"
+          id="viz1634133515663"
+          style="position: relative"
+        >
+          <noscript
+            ><a href="#"
+              ><img
+                alt="Studio and Genre Analysis "
+                src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;N6&#47;N6YSNFQSK&#47;1_rss.png"
+                style="border: none"/></a></noscript
+          ><object class="tableauViz" style="display:none;"
+            ><param
+              name="host_url"
+              value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+            <param name="embed_code_version" value="3"/>
+            <param name="path" value="shared&#47;N6YSNFQSK"/>
+            <param name="toolbar" value="yes"/><param
+              name="static_image"
+              value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;N6&#47;N6YSNFQSK&#47;1.png"/>
+            <param name="animate_transition" value="yes"/><param
+              name="display_static_image"
+              value="yes"/><param name="display_spinner" value="yes"/><param
+              name="display_overlay"
+              value="yes"/><param name="display_count" value="yes"/><param
+              name="language"
+              value="en-US"
+          /></object>
+        </div>
+        <script type="text/javascript">
+          var divElement = document.getElementById("viz1634133515663");
+          var vizElement = divElement.getElementsByTagName("object")[0];
+          vizElement.style.width = "1016px";
+          vizElement.style.height = "991px";
+          var scriptElement = document.createElement("script");
+          scriptElement.src =
+            "https://public.tableau.com/javascripts/api/viz_v1.js";
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+        <br /><br />
+
+        <p>
+          <br />
+          We focused on looking at the films by studio and genre. First, we
+          created two bubble charts to show the number of films each studio
+          produced that were used in this dataset, compared to the cumulative
+          worldwide gross revenue that each studio received as a result of these
+          films. This answers the question of how prevalent each studio is in
+          the dataset, compared to the gross revenue they received. <br /><br />
+
+          Moving on to looking at genre, we looked at the count of each genre
+          and the types of genres featured in this dataset. We then created a
+          bstacked ar chart that depicts how many films of each genre that each
+          studio produced. It answers the question of what genres are most
+          frequently produced in a dataset of profitable stories. This chart
+          could also be compared to the worldwide gross revenue per studio
+          bubble chart, looking at which film genres are produced/profitable by
+          lead studios of the highest worldwide gross revenue. <br /><br />
+
+          Finally, we compared the cumulative profitability and the worldwide
+          gross revenue per genre in a side-by-side bar chart. This combines the
+          previous bar chart that looked at genres by studios and the initial
+          bubble chart of worldwide gross revenue by studio. It removes the
+          studio variable, but better highlights the most profitable genres, as
+          well as comparing their worldwide gross revenue to the end result of
+          profitability.
+          <br /><br />
+        </p>
+        <div
+          class="tableauPlaceholder"
+          id="viz1634145095242"
+          style="position: relative"
+        >
+          <noscript
+            ><a href="#"
+              ><img
+                alt="Analysis of Ratings and Financial Performance "
+                src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mo&#47;MostProfitableMovies_16341022309150&#47;Ratings&#47;1_rss.png"
+                style="border: none"/></a></noscript
+          ><object class="tableauViz" style="display:none;"
+            ><param
+              name="host_url"
+              value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+            <param name="embed_code_version" value="3"/>
+            <param name="site_root" value=""/><param
+              name="name"
+              value="MostProfitableMovies_16341022309150&#47;Ratings"/><param
+              name="tabs"
+              value="no"/><param name="toolbar" value="yes"/><param
+              name="static_image"
+              value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mo&#47;MostProfitableMovies_16341022309150&#47;Ratings&#47;1.png"/>
+            <param name="animate_transition" value="yes"/><param
+              name="display_static_image"
+              value="yes"/><param name="display_spinner" value="yes"/><param
+              name="display_overlay"
+              value="yes"/><param name="display_count" value="yes"/><param
+              name="language"
+              value="en-US"
+          /></object>
+        </div>
+        <script type="text/javascript">
+          var divElement = document.getElementById("viz1634145095242");
+          var vizElement = divElement.getElementsByTagName("object")[0];
+          vizElement.style.width = "100%";
+          vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+          var scriptElement = document.createElement("script");
+          scriptElement.src =
+            "https://public.tableau.com/javascripts/api/viz_v1.js";
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+        <p>
+          <br /><br />Before analyzing the dataset, we thought that there would
+          be a positive correlation between movie rating and the financial
+          performance of a film. There is indeed a positive correlation when we
+          look at Rotten Tomatoes scores and the profitability and gross revenue
+          generated; however, it is not as strong as we initially thought it
+          would be. It also seems that the range of profitability for films is
+          not as wide as the range of worldwide gross for the dataset, so it
+          appears that profitability doesn’t vary as significantly from movie to
+          movie as it does for worldwide gross. When we look at the actual
+          audience rating and its relationship to the financial performance of a
+          movie, we see that the correlation is stronger, especially when
+          analyzing the worldwide gross. This makes sense as movies that tend to
+          do well with a wider general audience will generate more hype and
+          higher ticket sales than a movie that appeals more to a smaller circle
+          of professional critics, even if it has a lower Rotten Tomatoes score.
+          However, generally we see that audience ratings and Rotten Tomatoes
+          scores tend to have a positive correlation. <br /><br />
+        </p>
+      </div>
+
+      <div
+        class="tableauPlaceholder"
+        id="viz1634102079802"
+        style="position: relative"
+      >
+        <noscript
+          ><a href="#"
+            ><img
+              alt="Time Analysis of Hollywood&#39;s Most Profitable Movies "
+              src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;W5&#47;W56KTRXKN&#47;1_rss.png"
+              style="border: none"/></a></noscript
+        ><object class="tableauViz" style="display:none;"
+          ><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+          <param name="embed_code_version" value="3"/>
+          <param name="path" value="shared&#47;W56KTRXKN"/>
+          <param name="toolbar" value="yes"/><param
+            name="static_image"
+            value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;W5&#47;W56KTRXKN&#47;1.png"/>
+          <param name="animate_transition" value="yes"/><param
+            name="display_static_image"
+            value="yes"/><param name="display_spinner" value="yes"/><param
+            name="display_overlay"
+            value="yes"/><param name="display_count" value="yes"/><param
+            name="language"
+            value="en-US"
+        /></object>
+      </div>
+      <script type="text/javascript">
+        var divElement = document.getElementById("viz1634102079802");
+        var vizElement = divElement.getElementsByTagName("object")[0];
+        vizElement.style.width = "1016px";
+        vizElement.style.height = "991px";
+        var scriptElement = document.createElement("script");
+        scriptElement.src =
+          "https://public.tableau.com/javascripts/api/viz_v1.js";
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+      <p>
+        <br /><br />
+        We also decided to look at the data over time and see how different variables 
+        have shifted over the years.  First, we looked at how many movies were made 
+        each year in our dataset.  We noticed an almost cyclical nature, with approximately
+        19 movies in 2008 and 2010 and between 11 and 13 movies in 2007, 2009 and 2011.
+        Although our dataset is limited, we felt these films are comparable to each other
+        and thus our analysis can still be used to draw conclusions about trends in the 
+        data over time. We then examined each studio to see who was increasing the number of
+        films on the list from 2007 to 2011 and found that independent films were becoming 
+        more popular since they had the greatest increase in the "Hollywood's Most Profitable 
+        Movies" dataset.  We also looked at the number of films by genre and saw a sharp decrease
+        in comedy movies in 2011.  Next, we constructed streamgraphs for gross revenue by studio per 
+        year and found that the comedy genre and Disney stuidos collected the most revenue during the
+        majority of years from 2007 to 2011.  In contrast, independent studios were the most profitable
+        in 2007, 2008 and 2011 while dramas were the most profitable in 2008 and comedy was the most 
+        profitable every other year. Finally, another trend we looked at over time was the rotten tomato
+        score and saw that Sony had a sharp increase in its average rotten tomato score in 2011, due
+        to the high score that "Midnight in Paris" received.  Interestingly, animation had the highest 
+        average rotten tomato score out of any genre up until 2011, when comedy passed it because of the 
+        low score that "Gnomeo and Juliet" received.  Who would've thought Shakespeare would be the one
+        to bring the rating down. 
+      </p>
+
+    </div>
+
+    <h2>
+      Final Explanation
+    </h2>
+    <div class="container">
+      <div class="column">
+        <p>
+          From these analyses, we came away with some key conclusions about
+          profitable stories in Hollywood. The most prevalent genre of these
+          profitable stories was Comedy, which was the largest genre by count of
+          films, worldwide gross revenue, and profitability. The most films were
+          made by independent studios, followed by Warner Brothers. Disney and
+          Warner Brothers made the most worldwide gross revenue and
+          had mostly comedy films by count, but independent studios made more
+          romance films. We also learned that while there was a generally
+          positive correlation between high-grossing movies and profitable
+          films, the correlation was not particularly strong and a high-grossing
+          movie is not necessarily a profitable one, due to high production
+          costs. We also learned that when it came to profitability and
+          worldwide gross, audience opinion matters more than professional
+          critics, as there is a stronger correlation between financial
+          performance and overall audience opinion.  We found that over time 
+          the sharpest decrease was seen in the number of comedy movies in 2011,
+          while romance films were on the rise.  We were surprised to learn that
+          animated films had the highest rotten tomato score from 2008 to 2010 and
+          noticed that comedy and drama films seem to be getting higher rotten tomato
+          scores as of recently.  We enjoyed being able to analyze this dataset and 
+          are excited to see if these trends among Hollywood's most profitable stories
+          continue. 
+
+          <br /><br />
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
